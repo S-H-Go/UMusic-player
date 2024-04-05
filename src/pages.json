@@ -26,13 +26,31 @@
         "iconPath": "static/tabbar/home.png",
         "selectedIconPath": "static/tabbar/homeHL.png",
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "主页"
       },
       {
-        "iconPath": "static/tabbar/example.png",
-        "selectedIconPath": "static/tabbar/exampleHL.png",
-        "pagePath": "pages/index/about",
-        "text": "关于"
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/homeHL.png",
+        "pagePath": "pages/index/browse",
+        "text": "浏览"
+      },
+      {
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/homeHL.png",
+        "pagePath": "pages/index/radio",
+        "text": "广播"
+      },
+      {
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/homeHL.png",
+        "pagePath": "pages/index/library",
+        "text": "资料库"
+      },
+      {
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/homeHL.png",
+        "pagePath": "pages/index/search",
+        "text": "搜索"
       }
     ]
   },
@@ -46,25 +64,58 @@
       }
     },
     {
-      "path": "pages/index/about",
+      "path": "pages/login",
       "type": "page",
+      "layout": "default",
       "style": {
-        "navigationBarTitleText": "关于"
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/setting",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/index/browse",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/index/library",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/index/radio",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/index/search",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom"
       }
     }
   ],
   "subPackages": [
     {
       "root": "pages-sub",
-      "pages": [
-        {
-          "path": "demo/index",
-          "type": "page",
-          "style": {
-            "navigationBarTitleText": "分包页面 标题"
-          }
-        }
-      ]
+      "pages": []
     }
   ]
 }
