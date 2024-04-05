@@ -6,6 +6,7 @@ type IResData<T> = {
   code: number
   msg: string
   result: T
+  albums: T
 }
 
 type IUserInfo = {
