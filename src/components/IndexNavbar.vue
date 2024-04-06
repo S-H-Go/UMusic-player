@@ -1,17 +1,26 @@
 <template>
   <view class="index-navbar">
-    <view class="z-50 fixed flex justify-between w-100vw pt-2 h-8 bg-white">
-      <view class="top-title pl-30rpx text-lg" :class="{ 'slide-up': isSlideUp }">{{ title }}</view>
+    <view
+      class="box-border z-50 fixed flex justify-between w-100vw pt34rpx pb-34rpx h-105rpx bg-white lh-36rpx"
+    >
+      <text class="top-title pl-34rpx text-34rpx" :class="{ 'slide-up': isSlideUp }">
+        {{ title }}
+      </text>
       <view></view>
       <view class="more pr-4">
-        <wd-icon name="more" color="#f9233b"></wd-icon>
+        <wd-icon
+          name="more"
+          custom-style="font-weight: 700;"
+          color="#fa233b"
+          size="32rpx"
+        ></wd-icon>
       </view>
     </view>
-    <view class="pt-90rpx mx-30rpx">
-      <view class="text-3xl font-700">
+    <view class="pt-155rpx mx-30rpx">
+      <view class="text-3xl font-700 mb-32rpx">
         {{ title }}
-        <hr />
       </view>
+      <hr />
     </view>
   </view>
 </template>
