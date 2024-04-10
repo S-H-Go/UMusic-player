@@ -14,6 +14,7 @@
       title="最新专辑"
       :isNav="false"
       :data="newestAlbums"
+      detailsPageUrl="/pages/album/details"
       keyField="id"
       srcField="picUrl"
       nameField="name"
@@ -23,20 +24,13 @@
 </template>
 
 <script lang="ts" setup>
-import { getNewestAlbums, IAlbum } from '@/service/album'
+import { getNewestAlbums } from '@/service/album'
+import { countingAlbumAuthors } from '@/utils'
 
-const newestAlbums = ref<IAlbum[]>([])
+const newestAlbums = ref<IAlbumData[]>([])
 getNewestAlbums().then((res) => {
   newestAlbums.value = res.albums
-  newestAlbums.value.forEach((item) => {
-    item.author = item.artists.reduce((c, p, index) => {
-      if (index >= 1) {
-        return `${c + p.name},`
-      }
-      return c + p.name
-    }, '')
-  })
-  console.log(res.albums)
+  countingAlbumAuthors(newestAlbums.value)
 })
 </script>
 

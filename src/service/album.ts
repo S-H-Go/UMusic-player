@@ -1,10 +1,18 @@
 import { http } from '@/utils/http'
-import type { IAlbum } from './album.d'
 
-export { IAlbum }
 // 获取最新专辑
 export function getNewestAlbums() {
-  return http<IAlbum[]>({
+  return http<IAlbumData[]>({
     url: '/album/newest',
+  })
+}
+
+// 获取专辑详情（通过 ID）
+export function getAlbumDetail(id: number) {
+  return http({
+    url: '/album',
+    data: {
+      id,
+    },
   })
 }

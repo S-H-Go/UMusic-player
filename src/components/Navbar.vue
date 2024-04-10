@@ -1,5 +1,5 @@
 <template>
-  <view class="w-100vw h-105rpx flex items-center justify-between">
+  <view class="fixed z-50 bg-white w-100vw h-105rpx flex items-center justify-between">
     <view class="w-105rpx center" @click="back">
       <wd-icon
         name="arrow-left1"

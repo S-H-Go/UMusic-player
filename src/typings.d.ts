@@ -6,7 +6,9 @@ type IResData<T> = {
   code: number
   msg: string
   result: T
-  albums: T
+  albums: IAlbumData[]
+  album: IAlbumData
+  songs: ISongData[]
 }
 
 type IUserInfo = {
@@ -15,6 +17,13 @@ type IUserInfo = {
   /** 微信的 openid，非微信没有这个字段 */
   openid?: string
   token?: string
+}
+
+type IAlbumDetailResponse = {
+  album: IAlbumData
+  resourceState: boolean
+  code: number
+  songs: ISongData[]
 }
 
 type IAlbumData = {

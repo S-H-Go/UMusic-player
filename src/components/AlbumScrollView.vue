@@ -6,6 +6,7 @@
     <swiper scroll-x class="h-430rpx" :display-multiple-items="2">
       <swiper-item v-for="item in data" class="w-356rpx" :key="item[keyField]">
         <MiniAlbum
+          :toUrl="`${detailsPageUrl}?id=${item[keyField]}`"
           :src="item[srcField]"
           :name="item[nameField]"
           :author="item[authorField]"
@@ -24,6 +25,7 @@ const props = defineProps({
     default: '',
   },
   data: Array,
+  detailsPageUrl: String,
   keyField: String,
   srcField: String,
   nameField: String,
